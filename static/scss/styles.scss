@@ -3,13 +3,13 @@
 
 // common
 @import "./common/common";
-@import "./common/sidebar";
 
 // modal
 @import "./modal/confirm-modal";
 
 // pages
 @import "./pages/login";
+@import "./pages/invitation-code";
 
 // theme
 @import "./theme/color";

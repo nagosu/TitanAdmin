@@ -149,10 +149,10 @@ textarea {
 .navbar__menu-item:hover {
   background: #254652;
 }
-.navbar__menu-item--active {
+.navbar__menu-item.active {
   background: rgba(236, 240, 244, 0.19);
 }
-.navbar__menu-item--active span {
+.navbar__menu-item.active span {
   font-weight: 600;
 }
 .navbar__menu-item-text {
@@ -164,6 +164,17 @@ textarea {
   letter-spacing: 0;
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+}
+
+.content {
+  width: calc(100% - 290px);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 290px;
+  padding: 0 40px;
+  padding-top: 100px;
+  background: rgb(236, 240, 244);
 }
 
 @keyframes fadeIn {
@@ -357,6 +368,112 @@ textarea {
 }
 .login__wrapper .login__form-container .login__button:hover {
   background-color: #1e5558;
+}
+
+.select__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 35px;
+}
+.select__button button {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 1px solid #1b3133;
+  background: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+.select__button button:hover {
+  background-color: #1b3133;
+  color: #fff;
+}
+.select__button .used__button {
+  border-right: none;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 200px;
+}
+.select__button .not-used__button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+  border-bottom-left-radius: 0;
+}
+.select__button button.active {
+  background-color: #1b3133;
+  color: #fff;
+}
+
+.used__table,
+.not-used__table {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-collapse: collapse;
+  overflow-y: auto;
+  background-color: #fff;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+.used__table thead,
+.used__table tbody,
+.not-used__table thead,
+.not-used__table tbody {
+  width: 100%;
+  border-collapse: collapse;
+}
+.used__table thead tr,
+.used__table tbody tr,
+.not-used__table thead tr,
+.not-used__table tbody tr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 45px;
+}
+.used__table thead tr th,
+.used__table thead tr td,
+.used__table tbody tr th,
+.used__table tbody tr td,
+.not-used__table thead tr th,
+.not-used__table thead tr td,
+.not-used__table tbody tr th,
+.not-used__table tbody tr td {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+.used__table th,
+.not-used__table th {
+  font-weight: 600;
+}
+.used__table td,
+.not-used__table td {
+  font-weight: 500;
+}
+
+.used__table th,
+.used__table td {
+  width: 33.33%;
+}
+
+.not-used__table th,
+.not-used__table td {
+  width: 100%;
 }
 
 @keyframes fadeIn {
