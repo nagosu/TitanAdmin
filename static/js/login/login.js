@@ -13,7 +13,7 @@ function closeLoginErrorModal() {
 
 function setLoginErrorModalMessage() {
   loginModalMessage.innerHTML =
-    "아이디 or 패스워드가 맞지 않습니다.<br />다시 시도해주세요.";
+    "아이디 or 패스워드가 맞지 않습니다.<br>다시 시도해주세요.";
 }
 
 document.addEventListener("DOMContentLoaded", () => {

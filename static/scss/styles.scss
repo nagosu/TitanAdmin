@@ -5,12 +5,13 @@
 @import "./common/common";
 
 // modal
-@import "./modal/confirm-modal";
+@import "./modal/modal";
 
 // pages
 @import "./pages/login";
 @import "./pages/invitation-code";
 @import "./pages/cs-center";
+@import "./pages/category-edit";
 
 // theme
 @import "./theme/color";
