@@ -2045,6 +2045,42 @@ textarea {
   background-color: #d3d3d3;
 }
 
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px 30px;
+  gap: 30px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.banner__form-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+.banner__form-wrapper h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.banner__input-container {
+  display: flex;
+  width: 700px;
+  height: 45px;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.banner__input-container input {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
