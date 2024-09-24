@@ -30,8 +30,9 @@
     padding: 20px;
     gap: 20px;
     background-color: #fff;
-    box-shadow: $box-shadow-small;
+    border: 1px solid $border-light-color;
     border-radius: $rounded-small;
+    box-shadow: $box-shadow-small;
   }
 
   &__item {

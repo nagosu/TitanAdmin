@@ -1,0 +1,14 @@
+@import "../theme/color";
+
+.company {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid $border-light-color;
+  border-radius: $rounded-small;
+  box-shadow: $box-shadow-medium;
+}
