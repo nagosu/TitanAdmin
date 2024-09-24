@@ -1933,6 +1933,118 @@ textarea {
   background: #f0f0f0;
 }
 
+.problem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  border: 1px solid #ccc;
+  background-color: #142127;
+}
+.problem__select-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+.problem__depth-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  height: 100%;
+  border-right: 1px solid #142127;
+  border-collapse: collapse;
+}
+.problem__depth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 60px;
+  border-bottom: 1px solid #142127;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.problem__depth-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 60px);
+  gap: 20px;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+.problem__depth-select-title-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.problem__depth-select-title-wrapper img {
+  position: absolute;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.problem__depth-select-title-wrapper img:hover {
+  opacity: 0.7;
+}
+.problem__depth-select-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.problem__depth-select-title.active {
+  font-weight: 600;
+}
+.problem__depth-add-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  transition: background-color 0.3s;
+}
+.problem__depth-add-button:hover {
+  background-color: #e0e0e0;
+}
+.problem__edit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 80px;
+  background-color: #f8f8f8;
+  color: #142127;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+.problem__edit-button:hover {
+  background-color: #d3d3d3;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -1,0 +1,126 @@
+@import "../theme/color";
+
+.problem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  border: 1px solid $border-light-color;
+  background-color: $primary-color;
+
+  &__select-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: $background-main-color;
+  }
+
+  &__depth-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+    height: 100%;
+    border-right: 1px solid $primary-color;
+    border-collapse: collapse;
+  }
+
+  &__depth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 60px;
+    border-bottom: 1px solid $primary-color;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  &__depth-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 60px);
+    gap: 20px;
+    padding: 20px 0;
+    overflow-y: auto;
+
+    &-title-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      img {
+        position: absolute;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 1.1rem;
+      font-weight: 400;
+      cursor: pointer;
+
+      &.active {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__depth-add-button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid $border-light-color;
+    border-radius: $rounded-medium;
+    box-shadow: $box-shadow-large;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+
+  &__edit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 80px;
+    background-color: $background-main-color;
+    color: $primary-color;
+    border: 1px solid $border-light-color;
+    border-radius: $rounded-medium;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #d3d3d3;
+    }
+  }
+}

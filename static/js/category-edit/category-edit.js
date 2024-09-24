@@ -1,4 +1,3 @@
-// 1. 선택자와 변수 정의 부분
 const categorySelectButtons = document.querySelectorAll(
   ".category__select-button"
 );
@@ -10,13 +9,13 @@ const depthSelectTitleWrappers = document.querySelectorAll(
   ".category__depth-select-title-wrapper"
 );
 const deleteModalConfirm = document.getElementById("deleteModalConfirm");
+const deleteModalMessage = document.getElementById("deleteModalMessage");
 const deleteModalConfirmButton = document.getElementById(
   "deleteModalConfirmButton"
 );
 const deleteModalCancelButton = document.getElementById(
   "deleteModalCancelButton"
 );
-const deleteModalMessage = document.getElementById("deleteModalMessage");
 const blankModalConfirm = document.getElementById("blankModalConfirm");
 const blankModalCloseButton = document.getElementById("blankModalCloseButton");
 const blankModalMessage = document.getElementById("blankModalMessage");
@@ -25,7 +24,6 @@ const categoryDepthAddButtons = document.querySelectorAll(
 );
 const categoryDepthSelect = document.querySelector(".category__depth-select");
 
-// 2. 함수 정의 부분
 // 카테고리 버튼 클릭 시 active 클래스를 변경하는 함수
 function handleCategorySelect() {
   categorySelectButtons.forEach((button) => button.classList.remove("active"));
@@ -80,7 +78,6 @@ function hideDepthAddButtons() {
 // 삭제 이미지 추가하는 함수
 function addDeleteIcons() {
   depthSelectTitleWrappers.forEach((wrapper) => {
-    // 이미 이미지가 추가된 경우는 건너뛴다
     if (!wrapper.querySelector("img")) {
       const img = document.createElement("img");
       img.src = "../../static/images/icon/svg/Remove.svg";
@@ -143,7 +140,6 @@ function makeTitlesEditable(isEditable) {
   });
 }
 
-// 3. DOMContentLoaded 이벤트 핸들링
 document.addEventListener("DOMContentLoaded", () => {
   categorySelectButtons.forEach((button) => {
     button.addEventListener("click", handleCategorySelect);
