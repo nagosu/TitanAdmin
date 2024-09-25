@@ -15,8 +15,6 @@ function changeSliderValue() {
 
 // 저장 확인 모달 열기 함수
 function openSaveModal() {
-  saveModalMessage.innerHTML =
-    "변형문제 비율을 입력된 설정으로<br>저장하시겠습니까?";
   saveModalConfirm.style.display = "flex";
 }
 

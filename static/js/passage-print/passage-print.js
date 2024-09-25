@@ -16,7 +16,6 @@ let selectedProblemTypes = {};
 
 // 저장 오류 모달 열기 함수
 function openSaveErrorModal() {
-  saveErrorModalMessage.innerHTML = "제목 or 본문을 입력해 주세요.";
   saveErrorModalConfirm.style.display = "flex";
 }
 
@@ -27,7 +26,6 @@ function closeSaveErrorModal() {
 
 // 삭제 모달 열기 함수
 function openDeleteModal() {
-  deleteModalMessage.innerHTML = "등록된 파일이 삭제되었습니다.";
   deleteModalConfirm.style.display = "flex";
 }
 

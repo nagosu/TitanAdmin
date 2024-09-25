@@ -75,7 +75,6 @@ function handleDepth2Select(selected) {
 
 // 삭제 확인 모달 여는 함수
 function openDeleteConfirmModal() {
-  deleteModalMessage.innerHTML = "해당 카테고리를<br>정말로 삭제하시겠습니까?";
   deleteModalConfirm.style.display = "flex";
 }
 

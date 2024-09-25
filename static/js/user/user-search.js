@@ -21,8 +21,6 @@ const saveModalCancelButton = document.getElementById("saveModalCancelButton");
 
 // 조회 오류 모달 열기 함수
 function openSearchErrorModal() {
-  searchErrorModalMessage.innerHTML =
-    "해당 사용자 정보를 조회할 수 없습니다.<br>다시 사용자 ID를 입력해주세요.";
   searchErrorModalConfirm.style.display = "flex";
 }
 
@@ -43,7 +41,6 @@ function closeUserSearchModal() {
 
 // 저장 모달 열기 함수
 function openSaveModal() {
-  saveModalMessage.innerHTML = "입력된 이용자 정보로<br>변경하시겠습니까?";
   saveModalConfirm.style.display = "flex";
 }
 

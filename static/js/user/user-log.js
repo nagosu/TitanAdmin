@@ -11,7 +11,6 @@ const searchErrorModalCloseButton = document.getElementById(
 
 // 조회 오류 모달 열기 함수
 function openSearchErrorModal() {
-  searchErrorModalMessage.innerHTML = "년/월을 설정해 주세요.";
   searchErrorModalConfirm.style.display = "flex";
 }
 
