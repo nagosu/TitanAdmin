@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: 50px;
+    min-height: 40px;
   }
 
   &__email-input-container {
@@ -24,7 +24,7 @@
       height: 100%;
       border: none;
       outline: none;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #000;
     }
   }
@@ -37,14 +37,14 @@
     gap: 10px;
 
     button {
-      width: 200px;
+      width: 180px;
       height: 100%;
       border: none;
       border-radius: $rounded-medium;
       background-color: $primary-button-color;
       color: #fff;
-      font-size: 1.1rem;
-      font-weight: 500;
+      font-size: 1rem;
+      font-weight: 600;
       transition: background-color 0.3s;
 
       &:hover {
@@ -58,14 +58,18 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: calc(100% - 50px);
-  box-shadow: $box-shadow-small;
+  height: 100%;
+  border: 1px solid $border-light-color;
+  box-shadow: $box-shadow-medium;
   border-collapse: collapse;
   overflow-y: auto;
-  // border-radius: $rounded-large;
   background-color: #fff;
-  margin-top: 20px;
+  margin-top: 10px;
   border-collapse: collapse;
+
+  thead {
+    border-bottom: 1px solid #aaa;
+  }
 
   thead,
   tbody {
@@ -87,7 +91,6 @@
         justify-content: center;
         align-items: center;
         font-size: 0.9rem;
-        border: 1px solid $border-light-color;
         border-collapse: collapse;
       }
     }
@@ -218,7 +221,7 @@
     background-color: #fff;
     border: 1px solid $border-light-color;
     border-radius: $rounded-small;
-    box-shadow: $box-shadow-small;
+    box-shadow: $box-shadow-medium;
     padding: 30px;
     gap: 30px;
   }
@@ -241,7 +244,7 @@
       justify-content: center;
       width: fit-content;
       height: 100%;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 500;
       padding: 0 20px;
       border: 1px solid $border-light-color;
@@ -263,6 +266,7 @@
     justify-content: space-between;
     align-items: center;
     width: calc(100% - 120px);
+    height: 40px;
     margin-left: 120px;
 
     .dropdown__container {
@@ -275,10 +279,11 @@
         position: relative;
         display: inline-block;
         width: fit-content;
-        height: 100%;
+        height: fit-content;
+        text-align: center;
         border: 1px solid #ccc;
         border-radius: 8px;
-        padding: 10px;
+        padding: 4px 10px;
         cursor: pointer;
 
         .selected {
@@ -400,7 +405,7 @@
       box-shadow: $box-shadow-small;
       background-color: #fff;
       padding: 15px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #000;
       resize: none;
       word-break: break-all;
@@ -426,15 +431,13 @@
     background-color: #fff;
     border: 1px solid $border-light-color;
     border-radius: $rounded-small;
-    box-shadow: $box-shadow-small;
+    box-shadow: $box-shadow-medium;
     padding: 30px;
     gap: 30px;
     margin-top: 20px;
 
     .log-search__container {
       width: 100%;
-      border: 2px solid $primary-color;
-      border-radius: $rounded-small;
       box-shadow: $box-shadow-small;
     }
 
@@ -444,7 +447,7 @@
       width: 100%;
       border-collapse: collapse;
       overflow-y: auto;
-      // border-radius: $rounded-large;
+      border: 1px solid $primary-color;
       background-color: #fff;
 
       thead,
@@ -466,7 +469,7 @@
             justify-content: center;
             align-items: center;
             font-size: 0.9rem;
-            border: 1px solid #aaa;
+            border: 1px solid $primary-color;
             border-collapse: collapse;
           }
         }
@@ -554,8 +557,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        border: 2px solid $primary-color;
-        border-collapse: collapse;
+        border-bottom: none;
         border-radius: $rounded-small;
         box-shadow: $box-shadow-small;
       }
@@ -568,7 +570,8 @@
         height: 50px;
         font-size: 1.1rem;
         font-weight: 600;
-        border-bottom: 1px solid #aaa;
+        border: 2px solid $primary-color;
+        border-bottom: none;
       }
     }
   }

@@ -51,7 +51,7 @@
   display: none;
   flex-direction: column;
   width: 100%;
-  height: calc(100% - 35px);
+  height: 100%;
   border: 1px solid $border-light-color;
   box-shadow: $box-shadow-medium;
   border-radius: $rounded-small;
@@ -59,7 +59,6 @@
   overflow-y: auto;
   background-color: #fff;
   margin-top: 20px;
-  border-collapse: collapse;
 
   thead {
     border-bottom: 1px solid #aaa;

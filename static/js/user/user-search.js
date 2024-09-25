@@ -1,6 +1,4 @@
-const userSearchButtons = document.querySelectorAll(
-  ".user__search-button-container button"
-);
+const userSearchButton = document.querySelector(".user__search-button");
 const searchErrorModalConfirm = document.getElementById(
   "searchErrorModalConfirm"
 );
@@ -56,11 +54,9 @@ function closeSaveModal() {
 
 // DOMContentLoaded 이벤트 핸들링
 document.addEventListener("DOMContentLoaded", () => {
-  userSearchButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      openUserSearchModal();
-      openSearchErrorModal();
-    });
+  userSearchButton.addEventListener("click", () => {
+    openUserSearchModal();
+    openSearchErrorModal();
   });
 
   searchErrorModalCloseButton.addEventListener("click", closeSearchErrorModal);
@@ -71,4 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
     closeSaveModal();
     closeUserSearchModal();
   });
+
+  saveModalCancelButton.addEventListener("click", closeSaveModal);
 });
