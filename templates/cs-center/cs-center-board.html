@@ -45,6 +45,9 @@
             >
           </a>
           <a href="" class="navbar__menu-item">
+            <span class="navbar__menu-item-text">문제 유형 등록/수정</span>
+          </a>
+          <a href="" class="navbar__menu-item">
             <span class="navbar__menu-item-text">공지 사항 배너 설정</span>
           </a>
           <a href="" class="navbar__menu-item">
@@ -64,7 +67,7 @@
           <div class="article__item">
             <div class="article__item-title-container">
               <h2>게시글 제목</h2>
-              <h3>게시글 본문 영역</h3>
+              <h4>게시글 본문 영역</h4>
             </div>
             <div class="article__item-image-container">
               <img
@@ -75,8 +78,8 @@
             </div>
           </div>
           <div class="article__button-wrapper">
-            <button class="">편집</button>
-            <button class="">삭제</button>
+            <button class="edit__button">편집</button>
+            <button class="delete__button">삭제</button>
           </div>
         </div>
         <div class="article__item-wrapper">
@@ -94,15 +97,15 @@
             </div>
           </div>
           <div class="article__button-wrapper">
-            <button class="">편집</button>
-            <button class="">삭제</button>
+            <button class="edit__button">편집</button>
+            <button class="delete__button">삭제</button>
           </div>
         </div>
         <div class="article__item-wrapper">
           <div class="article__item">
             <div class="article__item-title-container">
               <h2>게시글 제목</h2>
-              <h3>게시글 본문 영역</h3>
+              <h4>게시글 본문 영역</h4>
             </div>
             <div class="article__item-image-container">
               <img
@@ -113,12 +116,35 @@
             </div>
           </div>
           <div class="article__button-wrapper">
-            <button class="">편집</button>
-            <button class="">삭제</button>
+            <button class="edit__button">편집</button>
+            <button class="delete__button">삭제</button>
           </div>
         </div>
       </section>
       <!-- //콘텐츠 -->
     </div>
+
+    <!-- 삭제 확인 모달 -->
+    <div id="deleteModalConfirm" class="modal select">
+      <div class="modal__content">
+        <div class="modal__message-container">
+          <span id="deleteModalMessage" class="modal__message"
+            >해당 항목을 삭제(취소)하시겠습니까?</span
+          >
+        </div>
+        <div class="modal__button-container">
+          <button id="deleteModalConfirmButton" class="modal__button confirm">
+            확인
+          </button>
+          <button id="deleteModalCancelButton" class="modal__button cancel">
+            취소
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- //삭제 확인 모달 -->
+
+    <!-- 스크립트 -->
+    <script src="../../static/js/cs-center/cs-center-board.js"></script>
   </body>
 </html>

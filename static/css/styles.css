@@ -429,12 +429,12 @@ textarea {
   align-items: center;
   width: 800px;
   height: 500px;
-  background-color: #e9e9e9;
+  background-color: #fff;
   padding: 0 60px;
   gap: 40px;
+  border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ccc;
 }
 .login__wrapper .login__form-container .login__input-container {
   display: flex;
@@ -523,12 +523,18 @@ textarea {
   flex-direction: column;
   width: 100%;
   height: calc(100% - 35px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   border-collapse: collapse;
   overflow-y: auto;
   background-color: #fff;
   margin-top: 20px;
   border-collapse: collapse;
+}
+.used__table thead,
+.not-used__table thead {
+  border-bottom: 1px solid #aaa;
 }
 .used__table thead,
 .used__table tbody,
@@ -560,7 +566,6 @@ textarea {
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
-  border: 1px solid #aaa;
   border-collapse: collapse;
 }
 .used__table th,
@@ -612,7 +617,7 @@ textarea {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .article__item {
   display: flex;
@@ -620,6 +625,11 @@ textarea {
   width: 100%;
   height: 700px;
   gap: 20px;
+  background-color: #eee;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 .article__item-title-container {
   display: flex;
@@ -682,7 +692,7 @@ textarea {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 40px 30px;
   gap: 50px;
 }
@@ -1715,11 +1725,12 @@ textarea {
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
+  max-height: 200px;
   border: 1px solid #ccc;
   border-radius: 8px;
   background: #fff;
-  z-index: 1;
-  overflow: hidden;
+  z-index: 10;
+  overflow-y: auto;
 }
 .school .dropdown .dropdown-menu.active {
   display: block;

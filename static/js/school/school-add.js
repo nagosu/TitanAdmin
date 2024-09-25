@@ -15,7 +15,59 @@ const addErrorModalCloseButton = document.getElementById(
 );
 const dropdowns = document.querySelectorAll(".dropdown");
 
+const depth1Container = document.querySelector(
+  ".dropdown.depth1 .dropdown-menu"
+);
+const depth2Container = document.querySelector(
+  ".dropdown.depth2 .dropdown-menu"
+);
+const depth3Container = document.querySelector(
+  ".dropdown.depth3 .dropdown-menu"
+);
+
+let selectedDepth1 = "";
+let selectedDepth2 = "";
 let selectedProblemTypes = {};
+
+// depth1 항목 표시 함수
+function showDepth1Options() {
+  depth1Container.innerHTML = ""; // 초기화
+  Object.keys(problemData).forEach((depth1) => {
+    const div = document.createElement("div");
+    div.textContent = depth1;
+    div.addEventListener("click", () => handleDepth1Select(depth1));
+    depth1Container.appendChild(div);
+  });
+}
+
+// depth1 선택 시 depth2 항목 표시 함수
+function handleDepth1Select(selected) {
+  selectedDepth1 = selected;
+  depth2Container.innerHTML = ""; // 초기화
+  const depth2Data = Object.keys(problemData[selected]);
+  depth2Data.forEach((depth2) => {
+    const div = document.createElement("div");
+    div.textContent = depth2;
+    div.addEventListener("click", () => handleDepth2Select(depth2));
+    depth2Container.appendChild(div);
+  });
+  // depth2Container.parentElement.classList.add("active"); // depth2 표시
+  selectedProblemTypes[1] = selected; // depth1 선택된 값 저장
+}
+
+// depth2 선택 시 depth3 항목 표시 함수
+function handleDepth2Select(selected) {
+  selectedDepth2 = selected;
+  depth3Container.innerHTML = ""; // 초기화
+  const depth3Data = problemData[selectedDepth1][selected];
+  depth3Data.forEach((depth3) => {
+    const div = document.createElement("div");
+    div.textContent = depth3;
+    depth3Container.appendChild(div);
+  });
+  // depth3Container.parentElement.classList.add("active"); // depth3 표시
+  selectedProblemTypes[2] = selected; // depth2 선택된 값 저장
+}
 
 // 등록 확인 모달 열기 함수
 function openAddModal() {
@@ -73,6 +125,8 @@ function selectDropdownItem(event, selected, dropdownMenu, dropdown, index) {
 
 // DOMContentLoaded 이벤트 핸들링
 document.addEventListener("DOMContentLoaded", () => {
+  showDepth1Options(); // depth1 초기 표시
+
   schoolButton.addEventListener("click", openAddModal);
 
   addModalConfirmButton.addEventListener("click", () => {

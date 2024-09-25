@@ -23,12 +23,12 @@
     align-items: center;
     width: 800px;
     height: 500px;
-    background-color: #e9e9e9;
+    background-color: #fff;
     padding: 0 60px;
     gap: 40px;
+    border: 1px solid $border-light-color;
     border-radius: $rounded-medium;
     box-shadow: $box-shadow-medium;
-    border: 1px solid $border-light-color;
 
     .login__input-container {
       display: flex;

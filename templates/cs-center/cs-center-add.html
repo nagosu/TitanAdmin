@@ -45,6 +45,9 @@
             >
           </a>
           <a href="" class="navbar__menu-item">
+            <span class="navbar__menu-item-text">문제 유형 등록/수정</span>
+          </a>
+          <a href="" class="navbar__menu-item">
             <span class="navbar__menu-item-text">공지 사항 배너 설정</span>
           </a>
           <a href="" class="navbar__menu-item">
@@ -69,15 +72,9 @@
             <div class="add-form__content-column">
               <textarea placeholder="텍스트를 입력해주세요"></textarea>
               <div class="add-form__button-wrapper">
-                <input type="file" style="display: none" id="fileInputEdit" />
-                <button
-                  type="button"
-                  id="editImageBtn"
-                  onclick='document.getElementById("fileInputEdit").click()'
-                >
-                  이미지 수정
-                </button>
-                <div class="image-file__title">test.img</div>
+                <input type="file" style="display: none" id="fileInputUpload" />
+                <button type="button" id="uploadImageBtn">이미지 업로드</button>
+                <div class="image-file__title"></div>
                 <button type="button" class="">완료</button>
               </div>
             </div>
@@ -88,6 +85,6 @@
     </div>
 
     <!-- 스크립트 -->
-    <script src="../../static/js/cs-center/cs-center.js"></script>
+    <script src="../../static/js/cs-center/cs-center-add.js"></script>
   </body>
 </html>
