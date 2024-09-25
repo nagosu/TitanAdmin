@@ -60,8 +60,8 @@
             <div class="category__select-content-container">
               <div class="category__depth-container">
                 <div class="category__depth">2차</div>
-                <div class="category__depth-select">
-                  <div class="category__depth-select-title-wrapper">
+                <div class="category__depth-select" id="depth2Container">
+                  <!-- <div class="category__depth-select-title-wrapper">
                     <span class="category__depth-select-title">영어</span>
                   </div>
                   <div class="category__depth-select-title-wrapper">
@@ -74,14 +74,14 @@
                   </div>
                   <div class="category__depth-select-title-wrapper">
                     <span class="category__depth-select-title">실용영어</span>
-                  </div>
+                  </div> -->
                 </div>
                 <button class="category__depth-add-button">항목추가</button>
               </div>
               <div class="category__depth-container">
                 <div class="category__depth">3차</div>
-                <div class="category__depth-select">
-                  <div class="category__depth-select-title-wrapper">
+                <div class="category__depth-select" id="depth3Container">
+                  <!-- <div class="category__depth-select-title-wrapper">
                     <span class="category__depth-select-title"
                       >YBM(신정현)</span
                     >
@@ -100,14 +100,14 @@
                     <span class="category__depth-select-title"
                       >동아(권혁승)</span
                     >
-                  </div>
+                  </div> -->
                 </div>
                 <button class="category__depth-add-button">항목추가</button>
               </div>
               <div class="category__depth-container">
                 <div class="category__depth">4차</div>
-                <div class="category__depth-select">
-                  <div class="category__depth-select-title-wrapper">
+                <div class="category__depth-select" id="depth4Container">
+                  <!-- <div class="category__depth-select-title-wrapper">
                     <span class="category__depth-select-title active">1과</span>
                   </div>
                   <div class="category__depth-select-title-wrapper">
@@ -118,14 +118,14 @@
                   </div>
                   <div class="category__depth-select-title-wrapper">
                     <span class="category__depth-select-title">4과</span>
-                  </div>
+                  </div> -->
                 </div>
                 <button class="category__depth-add-button">항목추가</button>
               </div>
               <div class="category__depth-container">
                 <div class="category__depth">5차</div>
-                <div class="category__depth-select">
-                  <div class="category__depth-select-title-wrapper">
+                <div class="category__depth-select" id="depth5Container">
+                  <!-- <div class="category__depth-select-title-wrapper">
                     <span class="category__depth-select-title">본문1</span>
                   </div>
                   <div class="category__depth-select-title-wrapper">
@@ -136,7 +136,7 @@
                   </div>
                   <div class="category__depth-select-title-wrapper">
                     <span class="category__depth-select-title">본문4</span>
-                  </div>
+                  </div> -->
                 </div>
                 <button class="category__depth-add-button">항목추가</button>
               </div>
@@ -152,7 +152,9 @@
     <div id="deleteModalConfirm" class="modal select">
       <div class="modal__content">
         <div class="modal__message-container">
-          <span id="deleteModalMessage" class="modal__message"></span>
+          <span id="deleteModalMessage" class="modal__message"
+            >해당 카테고리를<br />정말로 삭제하시겠습니까?</span
+          >
         </div>
         <div class="modal__button-container">
           <button id="deleteModalConfirmButton" class="modal__button confirm">
@@ -170,7 +172,9 @@
     <div id="blankModalConfirm" class="modal confirm">
       <div class="modal__content">
         <div class="modal__message-container">
-          <span id="blankModalMessage" class="modal__message"></span>
+          <span id="blankModalMessage" class="modal__message"
+            >카테고리명에 빈칸이 확인됩니다.<br />빈칸을 입력해 주세요.</span
+          >
         </div>
         <button
           type="button"
@@ -184,6 +188,7 @@
     <!-- //빈칸 오류 모달 -->
 
     <!-- 스크립트 -->
+    <script src="../../static/data/lecture-data.js"></script>
     <script src="../../static/js/category-edit/category-edit.js"></script>
   </body>
 </html>

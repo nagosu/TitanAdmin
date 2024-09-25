@@ -820,6 +820,7 @@ textarea {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .category__select-container {
   display: flex;
@@ -860,7 +861,7 @@ textarea {
   height: calc(100% - 60px);
   justify-content: space-between;
   align-items: flex-start;
-  border: 1px solid #ccc;
+  border: 1px solid #142127;
   border-top: none;
   border-collapse: collapse;
   background-color: #1b3133;
@@ -930,6 +931,7 @@ textarea {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 0 10px;
 }
 .category__depth-select-title-wrapper img {
   position: absolute;
@@ -945,6 +947,7 @@ textarea {
 .category__depth-select-title {
   font-size: 1.1rem;
   font-weight: 400;
+  text-align: center;
   cursor: pointer;
 }
 .category__depth-select-title.active {
