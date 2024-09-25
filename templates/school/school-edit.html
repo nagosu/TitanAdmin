@@ -95,7 +95,7 @@
               <div class="problem__select">
                 <h3>문제 유형</h3>
                 <div class="problem__grid">
-                  <div class="problem__grid-item">
+                  <!-- <div class="problem__grid-item">
                     <h4>문제 1.</h4>
                     <div class="problem__dropdown-container">
                       <span class="depth">DEPTH 1</span>
@@ -322,7 +322,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -340,7 +340,9 @@
     <div id="selectErrorModalConfirm" class="modal confirm">
       <div class="modal__content">
         <div class="modal__message-container">
-          <span id="selectErrorModalMessage" class="modal__message"></span>
+          <span id="selectErrorModalMessage" class="modal__message"
+            >데이터를 변경할 학교를 선택해 주세요</span
+          >
         </div>
         <button
           type="button"
@@ -357,7 +359,9 @@
     <div id="saveModalConfirm" class="modal confirm">
       <div class="modal__content">
         <div class="modal__message-container">
-          <span id="saveModalMessage" class="modal__message"></span>
+          <span id="saveModalMessage" class="modal__message"
+            >데이터 수정 내용이 저장되었습니다.</span
+          >
         </div>
         <button
           type="button"
@@ -374,7 +378,9 @@
     <div id="deleteModalConfirm" class="modal select">
       <div class="modal__content">
         <div class="modal__message-container">
-          <span id="deleteModalMessage" class="modal__message"></span>
+          <span id="deleteModalMessage" class="modal__message"
+            >학교 유형을<br />정말로 삭제하시겠습니까?</span
+          >
         </div>
         <div class="modal__button-container">
           <button id="deleteModalConfirmButton" class="modal__button confirm">
@@ -392,7 +398,9 @@
     <div id="deleteErrorModalConfirm" class="modal confirm">
       <div class="modal__content">
         <div class="modal__message-container">
-          <span id="deleteErrorModalMessage" class="modal__message"></span>
+          <span id="deleteErrorModalMessage" class="modal__message"
+            >삭제할 학교를 선택해 주세요</span
+          >
         </div>
         <button
           type="button"
@@ -406,6 +414,7 @@
     <!-- //삭제 오류 모달 -->
 
     <!-- 스크립트 -->
+    <script src="../../static/data/problem-data.js"></script>
     <script src="../../static/js/school/school-edit.js"></script>
   </body>
 </html>

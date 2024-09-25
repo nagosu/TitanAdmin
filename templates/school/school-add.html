@@ -80,11 +80,11 @@
               <div class="problem__select">
                 <h3>문제 유형</h3>
                 <div class="problem__grid">
-                  <div class="problem__grid-item" data-index="1">
+                  <!-- <div class="problem__grid-item">
                     <h4>문제 1.</h4>
                     <div class="problem__dropdown-container">
                       <span class="depth">DEPTH 1</span>
-                      <div class="dropdown depth1" data-index="1">
+                      <div class="dropdown depth1">
                         <div class="selected">
                           DETPH 1
                           <img
@@ -93,12 +93,16 @@
                             class="triangle"
                           />
                         </div>
-                        <div class="dropdown-menu"></div>
+                        <div class="dropdown-menu">
+                          <div>객관식</div>
+                          <div>주관식</div>
+                          <div>서술형</div>
+                        </div>
                       </div>
                     </div>
                     <div class="problem__dropdown-container">
                       <span class="depth">DEPTH 2</span>
-                      <div class="dropdown depth2" data-index="1">
+                      <div class="dropdown depth2">
                         <div class="selected">
                           DETPH 2
                           <img
@@ -107,12 +111,16 @@
                             class="triangle"
                           />
                         </div>
-                        <div class="dropdown-menu"></div>
+                        <div class="dropdown-menu">
+                          <div>객관식</div>
+                          <div>주관식</div>
+                          <div>서술형</div>
+                        </div>
                       </div>
                     </div>
                     <div class="problem__dropdown-container">
                       <span class="depth">DEPTH 3</span>
-                      <div class="dropdown depth3" data-index="1">
+                      <div class="dropdown depth3">
                         <div class="selected">
                           DETPH 3
                           <img
@@ -121,15 +129,76 @@
                             class="triangle"
                           />
                         </div>
-                        <div class="dropdown-menu"></div>
+                        <div class="dropdown-menu">
+                          <div>객관식</div>
+                          <div>주관식</div>
+                          <div>서술형</div>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div class="problem__grid-item">
+                    <h4>문제 2.</h4>
+                    <div class="problem__dropdown-container">
+                      <span class="depth">DEPTH 1</span>
+                      <div class="dropdown depth1">
+                        <div class="selected">
+                          DETPH 1
+                          <img
+                            src="../../static/images/icon/svg/Arrow_drop_down.svg"
+                            alt="드롭다운 화살표"
+                            class="triangle"
+                          />
+                        </div>
+                        <div class="dropdown-menu">
+                          <div>객관식</div>
+                          <div>주관식</div>
+                          <div>서술형</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="problem__dropdown-container">
+                      <span class="depth">DEPTH 2</span>
+                      <div class="dropdown depth2">
+                        <div class="selected">
+                          DETPH 2
+                          <img
+                            src="../../static/images/icon/svg/Arrow_drop_down.svg"
+                            alt="드롭다운 화살표"
+                            class="triangle"
+                          />
+                        </div>
+                        <div class="dropdown-menu">
+                          <div>객관식</div>
+                          <div>주관식</div>
+                          <div>서술형</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="problem__dropdown-container">
+                      <span class="depth">DEPTH 3</span>
+                      <div class="dropdown depth3">
+                        <div class="selected">
+                          DETPH 3
+                          <img
+                            src="../../static/images/icon/svg/Arrow_drop_down.svg"
+                            alt="드롭다운 화살표"
+                            class="triangle"
+                          />
+                        </div>
+                        <div class="dropdown-menu">
+                          <div>객관식</div>
+                          <div>주관식</div>
+                          <div>서술형</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
                 </div>
               </div>
             </div>
           </div>
-          <button class="school__button">등록</button>
+          <button class="school__button add">등록</button>
         </div>
       </div>
       <!-- //콘텐츠 -->
@@ -139,7 +208,9 @@
     <div id="addModalConfirm" class="modal select">
       <div class="modal__content">
         <div class="modal__message-container">
-          <span id="addModalMessage" class="modal__message"></span>
+          <span id="addModalMessage" class="modal__message"
+            >학교별 유형을 신규<br />등록하시겠습니까?</span
+          >
         </div>
         <div class="modal__button-container">
           <button id="addModalConfirmButton" class="modal__button confirm">
@@ -157,7 +228,9 @@
     <div id="addDoneModalConfirm" class="modal confirm">
       <div class="modal__content">
         <div class="modal__message-container">
-          <span id="addDoneModalMessage" class="modal__message"></span>
+          <span id="addDoneModalMessage" class="modal__message"
+            >학교별 유형을 신규 등록 완료했습니다.</span
+          >
         </div>
         <button
           type="button"
@@ -174,7 +247,10 @@
     <div id="addErrorModalConfirm" class="modal confirm">
       <div class="modal__content">
         <div class="modal__message-container">
-          <span id="addErrorModalMessage" class="modal__message"></span>
+          <span id="addErrorModalMessage" class="modal__message"
+            >모든 정보가 입력되지 않았습니다.<br />모든 정보를 입력해
+            주세요</span
+          >
         </div>
         <button
           type="button"
