@@ -35,6 +35,9 @@
             >
           </a>
           <a href="" class="navbar__menu-item">
+            <span class="navbar__menu-item-text">문제 유형 등록/수정</span>
+          </a>
+          <a href="" class="navbar__menu-item">
             <span class="navbar__menu-item-text">공지 사항 배너 설정</span>
           </a>
           <a href="" class="navbar__menu-item">
@@ -51,7 +54,7 @@
       <div class="content">
         <div class="passage">
           <div class="category__select">
-            <div class="dropdown">
+            <div class="dropdown depth1">
               <div class="selected">
                 1차 카테고리 선택
                 <img
@@ -61,12 +64,12 @@
                 />
               </div>
               <div class="dropdown-menu">
-                <div>카테고리 1</div>
+                <!-- <div>카테고리 1</div>
                 <div>카테고리 2</div>
-                <div>카테고리 3</div>
+                <div>카테고리 3</div> -->
               </div>
             </div>
-            <div class="dropdown">
+            <div class="dropdown depth2">
               <div class="selected">
                 2차 카테고리 선택
                 <img
@@ -81,7 +84,7 @@
                 <div>카테고리 3</div>
               </div>
             </div>
-            <div class="dropdown">
+            <div class="dropdown depth3">
               <div class="selected">
                 3차 카테고리 선택
                 <img
@@ -96,7 +99,7 @@
                 <div>카테고리 3</div>
               </div>
             </div>
-            <div class="dropdown">
+            <div class="dropdown depth4">
               <div class="selected">
                 4차 카테고리 선택
                 <img
@@ -272,6 +275,7 @@
     <!-- //삭제 모달 -->
 
     <!-- 스크립트 -->
+    <script src="../../static/data/lecture-data.js"></script>
     <script src="../../static/js/passage-print/passage-print.js"></script>
   </body>
 </html>

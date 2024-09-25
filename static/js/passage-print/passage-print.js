@@ -90,8 +90,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-
-  document.addEventListener("click", (event) =>
-    toggleInputDropdown(event, inputContainer, inputDropdown)
-  );
 });
