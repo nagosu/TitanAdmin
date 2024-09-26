@@ -57,7 +57,6 @@ function createDropdown(options, depthClass) {
 
       if (depthClass === "depth1") {
         updateDepth2Options(this.textContent);
-        resetDropdown("depth3");
       } else if (depthClass === "depth2") {
         updateDepth3Options(selected.textContent);
       }
@@ -79,13 +78,10 @@ function updateDepth2Options(depth1Value) {
     optionDiv.addEventListener("click", function () {
       const selected = document.querySelector(".depth2 .selected");
       selected.childNodes[0].nodeValue = this.textContent + " ";
-      console.log(selected.childNodes[0].nodeValue);
 
       updateDepth3Options(option);
     });
   });
-
-  resetDropdown("depth3");
 }
 
 // DEPTH 3 옵션 업데이트 함수
@@ -116,21 +112,6 @@ function updateDepth3Options(depth2Value) {
       selected.childNodes[0].nodeValue = this.textContent + " ";
     });
   });
-}
-
-// 드롭다운 리셋 함수
-function resetDropdown(depthClass) {
-  const selected = document.querySelector(`.${depthClass} .selected`);
-  const dropdownMenu = document.querySelector(`.${depthClass} .dropdown-menu`);
-
-  if (depthClass === "depth1") {
-    selected.childNodes[0].nodeValue = "1차 카테고리 선택 ";
-  } else if (depthClass === "depth2") {
-    selected.childNodes[0].nodeValue = "2차 카테고리 선택 ";
-  } else {
-    selected.childNodes[0].nodeValue = "유형 등록 및 수정 ";
-  }
-  dropdownMenu.innerHTML = "";
 }
 
 // 저장 오류 모달 열기 함수
