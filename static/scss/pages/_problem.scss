@@ -154,11 +154,12 @@
       gap: 30px;
       margin-top: 60px;
 
-      .problem-add__title-container {
+      .problem-add__title-wrapper {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
-        gap: 20px;
+        gap: 30px;
 
         h3 {
           min-width: 150px;
@@ -186,6 +187,20 @@
             }
           }
         }
+      }
+
+      .problem-add__title-container {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        gap: 20px;
+      }
+
+      .problem-add__prompt-container {
+        display: flex;
+        align-items: center;
+        width: 20%;
+        gap: 20px;
       }
 
       .problem-add__content {
