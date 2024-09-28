@@ -5,7 +5,7 @@ const problemEditButton = document.querySelector(".problem__edit-button");
 const problemDepthAddButtons = document.querySelectorAll(
   ".problem__depth-add-button"
 );
-const problemDepthSelect = document.querySelector(".problem__depth-select");
+const problemDepthSelects = document.querySelectorAll(".problem__depth-select");
 const deleteModalConfirm = document.getElementById("deleteModalConfirm");
 const deleteModalMessage = document.getElementById("deleteModalMessage");
 const deleteModalConfirmButton = document.getElementById(
@@ -42,7 +42,8 @@ function handleDepth1Select(selected) {
   if (editMode) return;
 
   selectedDepth1 = selected;
-  depth2Container.innerHTML = ""; // 초기화
+  depth2Container.innerHTML = "";
+  depth3Container.innerHTML = "";
   const depth2Data = Object.keys(problemData[selected]);
   depth2Data.forEach((depth2) => {
     const div = document.createElement("div");
@@ -117,7 +118,10 @@ function showDepthAddButtons() {
   problemDepthAddButtons.forEach((button) => {
     button.style.display = "flex";
   });
-  problemDepthSelect.style.marginBottom = "80px";
+
+  problemDepthSelects.forEach((item) => {
+    item.style.marginBottom = "80px";
+  });
 }
 
 // "항목 추가" 버튼 숨김 함수
@@ -125,7 +129,10 @@ function hideDepthAddButtons() {
   problemDepthAddButtons.forEach((button) => {
     button.style.display = "none";
   });
-  problemDepthSelect.style.marginBottom = "0";
+
+  problemDepthSelects.forEach((item) => {
+    item.style.marginBottom = "0";
+  });
 }
 
 // 삭제 이미지 추가하는 함수

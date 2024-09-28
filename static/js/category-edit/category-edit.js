@@ -44,7 +44,7 @@ function loadCategoryData(
   depth5Container
 ) {
   const data = categoryData[category];
-  const depth2Keys = Object.keys(data[category]);
+  const depth2Keys = Object.keys(data);
 
   // depth2 데이터 로드
   depth2Container.innerHTML = "";
@@ -63,7 +63,7 @@ function loadCategoryData(
         .forEach((el) => el.classList.remove("active"));
       span.classList.add("active");
       loadDepth3Data(
-        data[category][key],
+        data[key],
         depth3Container,
         depth4Container,
         depth5Container
