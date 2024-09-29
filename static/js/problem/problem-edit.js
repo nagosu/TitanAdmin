@@ -21,6 +21,7 @@ const depth3Container = document.querySelector(".problem__depth-select.depth3");
 let editMode = false;
 let selectedDepth1 = "";
 let selectedDepth2 = "";
+let categoryToDelete = null; // 삭제할 카테고리
 
 // depth1 항목 표시 함수
 function showDepth1Options() {
@@ -72,6 +73,29 @@ function handleDepth2Select(selected) {
     depth3Container.appendChild(div);
   });
   depth3Container.style.display = "flex"; // depth3 표시
+}
+
+// "항목 추가" 버튼 클릭 시 새 카테고리 추가 함수
+function addNewCategory(button) {
+  const categoryContainer = button.previousElementSibling;
+
+  const newCategoryWrapper = document.createElement("div");
+  newCategoryWrapper.classList.add("problem__depth-select-title-wrapper");
+
+  const newCategoryTitle = document.createElement("span");
+  newCategoryTitle.classList.add("problem__depth-select-title");
+  newCategoryTitle.textContent = "신규 카테고리";
+
+  newCategoryWrapper.appendChild(newCategoryTitle);
+  categoryContainer.appendChild(newCategoryWrapper);
+}
+
+function deleteCategory() {
+  if (categoryToDelete) {
+    categoryToDelete.remove();
+    categoryToDelete = null;
+    closeDeleteConfirmModal();
+  }
 }
 
 // 삭제 확인 모달 여는 함수
@@ -172,7 +196,10 @@ function attachDeleteIconEvents() {
   );
 
   deleteButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+      categoryToDelete = e.target.closest(
+        ".problem__depth-select-title-wrapper"
+      );
       openDeleteConfirmModal();
     });
   });
@@ -198,7 +225,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   problemEditButton.addEventListener("click", toggleEditButtonText);
 
-  deleteModalConfirmButton.addEventListener("click", closeDeleteConfirmModal);
+  deleteModalConfirmButton.addEventListener("click", deleteCategory);
 
   deleteModalCancelButton.addEventListener("click", closeDeleteConfirmModal);
+
+  problemDepthAddButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      addNewCategory(button);
+      addDeleteIcons();
+      attachDeleteIconEvents();
+      makeTitlesEditable(true);
+    });
+  });
 });

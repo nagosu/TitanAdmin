@@ -12,8 +12,8 @@ const endOutput = document.getElementById("range__end");
 // % 값 변경 함수
 function changeSliderValue() {
   const currentValue = this.value;
-  startOutput.textContent = currentValue + "%";
-  endOutput.textContent = 100 - currentValue + "%";
+  startOutput.textContent = 100 - currentValue + "%";
+  endOutput.textContent = currentValue + "%";
 }
 
 // 저장 확인 모달 열기 함수
