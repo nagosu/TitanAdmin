@@ -208,9 +208,7 @@ function updateDepth5Options(depth4Value) {
   if (depth1Selected === "모의고사") {
     options = lectureData[depth1Selected][depth2Selected][depth4Value];
   } else if (depth1Selected === "시중단어책") {
-    options = Object.keys(
-      lectureData[depth1Selected][depth2Selected][depth4Value]
-    );
+    options = lectureData[depth1Selected][depth2Selected][depth4Value];
   } else {
     options =
       lectureData[depth1Selected][depth2Selected][depth3Selected][depth4Value];
