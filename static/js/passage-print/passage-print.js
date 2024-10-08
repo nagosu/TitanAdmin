@@ -32,7 +32,7 @@ const depth5Title = document.querySelector(".depth5 .selected");
 
 const lectureData = {
   교과서: textbookData,
-  모의고사: mockExamData,
+  모의고사: mockExamPassageData,
   EBS: ebsData,
   시중단어책: sellbookData,
 };
@@ -206,6 +206,7 @@ function updateDepth5Options(depth4Value) {
   let options;
 
   if (depth1Selected === "모의고사") {
+    options = lectureData[depth1Selected][depth2Selected][depth4Value];
   } else if (depth1Selected === "시중단어책") {
     options = Object.keys(
       lectureData[depth1Selected][depth2Selected][depth4Value]
